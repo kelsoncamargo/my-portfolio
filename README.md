@@ -1,0 +1,1 @@
+# This project is a front-end web application for my portfolio of programming and networking projects.
