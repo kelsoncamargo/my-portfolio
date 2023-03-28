@@ -1,0 +1,87 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@100&display=swap');
+/* IMPORTS */
+
+#body{
+  background-color: #1E1E1E;
+  width: 100vw;
+  height: 100vh;
+}
+
+#header{
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;  
+}
+
+#titleBox{
+  position: relative;
+}
+
+#mainTitle{
+  font-size: 25px;
+  line-height: 30.26px;
+  margin-top: 22px;
+  margin-left: 12px;
+  font-weight: 100;
+}
+
+#lineTitle{
+  width: 130px;
+  height: 2px;
+  margin-left: 0px;
+  margin-top: 3px;
+  background: #7A6FFF;
+  border-radius: 2px;
+}
+
+#burgerBox{
+  position: fixed;
+  right: 20px;
+  top: 26px;
+  
+}
+
+.burger{
+  width: 35px;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+#burger1{
+  margin-bottom: 6px;
+}
+
+#burger2{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#burger3{
+  margin-top: 6px;
+}
+
+#linksNav{
+  width: 80vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  background-color: #000000b7;
+}
+
+#listLinks{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 10% 0 30% 0;
+  list-style: none;
+  font-size: 20px;
+}
+
+
+
