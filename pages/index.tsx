@@ -1,11 +1,33 @@
 import styles from '@/styles/Home.module.css'
-import React, { useState } from 'react'
+import React, { useEffect, useState} from 'react'
 
 export default function Home() {
 
   const [toggle, setToggle] = useState(styles.linksNavNoToggle)
-          
- 
+  
+  function verifySizePage() {
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      function handleResize() {
+        setIsMobile(window.innerWidth < 700);
+      }
+  
+      // adiciona o listener para o evento de resize
+      window.addEventListener('resize', handleResize);
+  
+      // verifica o tamanho da tela inicialmente
+      handleResize();
+  
+      // remove o listener quando o componente é desmontado
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }, []);
+  
+    return (isMobile ? toggle : styles.linksNavNoToggle)
+  }
+
 
   return (
     <div id={styles.body}>
@@ -15,7 +37,7 @@ export default function Home() {
           <div id={styles.lineTitle}></div>
         </div>
 
-        <div id={styles.navLinksID} className={toggle}>
+        <div id={styles.navLinksID} className={verifySizePage()}>
           <ul id={styles.listLinks}>
             <li id={styles.linkNav1}>Home</li>
             <li id={styles.linkNav2}>Services</li>
