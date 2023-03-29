@@ -15,14 +15,14 @@
 }
 
 #titleBox{
-  position: relative;
+  margin-left: 10%;
 }
 
 #mainTitle{
   font-size: 25px;
   line-height: 30.26px;
   margin-top: 22px;
-  margin-left: 12px;
+  margin-left: -25%;
   font-weight: 100;
 }
 
@@ -33,13 +33,13 @@
   margin-top: 3px;
   background: #7A6FFF;
   border-radius: 2px;
+  margin-left: -28%;
 }
 
 #burgerBox{
   position: fixed;
   right: 20px;
   top: 26px;
-  
 }
 
 .burger{
@@ -62,8 +62,9 @@
   margin-top: 6px;
 }
 
-#linksNav{
-  width: 80vw;
+
+.linksNavNoToggle{
+  width: 0vw;
   height: 100vh;
   position: fixed;
   top: 0px;
@@ -71,10 +72,12 @@
   background-color: #000000b7;
 }
 
+#navLinksID
+
 #listLinks{
+  display: 0;
   height: 100%;
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
@@ -83,5 +86,16 @@
   font-size: 20px;
 }
 
+.listNavToggle{
+  position: fixed;
+  top: 0px;
+  right: 0;
+  background-color: #000000b7;
+  height: 100vh;
+  width: 80vw;
+}
 
+.listNavToggle > #listLinks{
+  display: flex;
+}
 
