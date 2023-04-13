@@ -1,0 +1,163 @@
+/* IMPORTS */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+/*IMPORTS */
+
+#header{
+    font-family: 'Inter', sans-serif;
+    background-color: #1E1E1E;
+    width: 100vw;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 22px;
+    max-width: 1250px;
+}
+
+#nav{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+    width: 100%;
+}
+
+
+#mainH1{
+  font-weight: 100;
+  font-size: 25px;
+  line-height: 30.26px;
+  padding-left: 10px;
+}
+
+#lineMainH1{
+    width: 130px;
+    height: 2px;
+    margin-top: 3px;
+    background: #7A6FFF;
+    border-radius: 2px;
+    margin-left: -28%;
+}
+
+.toggleBurger > #boxBurger{
+    position: relative;
+    z-index: 1;
+}
+
+.burger{
+    background-color: #ffff;
+    width: 40px;
+    height: 5px;
+    margin-right: 10px;
+}
+
+
+#burger1{
+    margin-bottom: 5px;
+}
+
+#burger2{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#burger3{
+    margin-top: 5px;
+}   
+
+.toggleBurger > #burger1{
+    margin-bottom: 0px;
+    transform: rotate(45deg);
+}
+
+.toggleBurger > #burger2{
+    margin-top: -5px;
+    margin-bottom: -5px;
+    opacity: 0;
+}
+
+.toggleBurger > #burger3{
+    margin-top: 0px;
+    transform: rotate(-45deg);
+}  
+
+#boxLinks{
+    display: none;
+}
+
+.toggleBurger > #boxLinks{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #0000009f;
+    width: 80vw;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggleBurger > #boxLinks > #linksUl{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 50vh;
+    padding-bottom: 100px;
+    font-size: 25px;
+    list-style: none;
+    font-weight: 100;
+}
+
+.linksLi:hover{
+    color: #7a6fff;
+}
+
+@media(min-width:835px){
+    #header{
+        margin-top: 30px;
+    }
+
+    #boxBurger{
+      display: none;
+    }
+
+    #boxLinks{
+        display: flex;
+        margin-right: 10px;
+        width: 100%;
+        height: 100%;
+        justify-content: right;
+
+    }
+    
+    #linksUl{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 100%;
+        list-style: none;
+    }
+    
+    .linksLi{
+        width: 15vw;
+        max-width: 187px;
+        font-size: 18px;
+        text-align: right;
+    }
+    
+    #mainH1{
+        font-size: 30px;
+    }
+
+    #lineMainH1{
+        margin-left: 25px;
+    }
+  }
+  
+
+
+
+

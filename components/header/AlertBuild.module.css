@@ -1,0 +1,58 @@
+#mainBox{
+    position: fixed;
+    z-index: 999;
+    background-color: #0000007c;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#alertBurgers{
+    position: absolute;
+    top: 0;
+}
+
+#alertBurgers > div{
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+}
+
+#burgerAlert1{
+    transform: rotate(45deg);
+    margin-bottom: -5px;
+}
+
+#burgerAlert2{
+    transform: rotate(-45deg);
+    margin-top: -5px;
+}
+
+#alertBox{
+    border: 2px solid #FF5B2F;
+    border-radius: 50px;
+    min-width: 260px;
+    width: 50vw;
+    max-width: 495px;
+    min-height: 274px;
+    height: 40vw;   
+    max-height: 395px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    
+}
+
+#alert{
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+    font-weight: bold;
+}
+
