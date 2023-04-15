@@ -1,11 +1,12 @@
 //IMPORTS
     import AlertBuild from './AlertBuild'
-import styles from './Header.module.css'
+    import styles from './Header.module.css'
     import { useState } from 'react'
+    import { HeaderTypes } from './types'
+    import { v4 as uuidv4 } from 'uuid';
 //IMPORTS
 
-
-export default function Header(){
+export default function Header(props:HeaderTypes){
     //VARIABLES 
         const [toggleBurger, setToggleBurger] = useState('')
         const [alert, setAlert] = useState(false)
@@ -25,11 +26,21 @@ export default function Header(){
                 break
             }        
         }
+        
+        function execAlert(param: boolean){
+            setAlert(param)
+        }
     //FUNCTIONS
+    console.log(props.links[0]?.execAlert)
+    console.log(props.links.map((link)=> {
+        console.log(link?.nameLink, link?.execAlert)
+    }))
+                        
+    
     return(
         <header id={styles.header}>
             <div id={styles.boxTitle}>
-                <h1 id={styles.mainH1}>PORTLOFIO</h1>
+                <h1 id={styles.mainH1}>{props.h1Head}</h1>
                 <div id={styles.lineMainH1}></div>
             </div>
             <nav id={styles.nav} className={toggleBurger}>
@@ -40,14 +51,30 @@ export default function Header(){
                 </div>
                 <div id={styles.boxLinks}>
                     <ul id={styles.linksUl}>
-                        <li><p id={styles.link1} className={styles.linksLi}>Home</p></li>
-                        <li><p id={styles.link2} className={styles.linksLi}>Services</p></li>
-                        <li><p id={styles.link3} className={styles.linksLi}>About</p></li>
-                        <li><p id={styles.link4} className={styles.linksLi}>Contact</p></li>
+                        {
+                            props.links.map(link => {
+                                const linkid = link?.linkId
+                                return (
+                                    <li key={uuidv4()}>
+                                        <p 
+                                            id={styles.linkid} 
+                                            className={styles.linksLi}
+                                            onClick={()=>{
+                                                link?.execAlert? execAlert(true) : null
+                                            }}
+                                        >
+                                            {link?.nameLink}
+                                        </p>
+                                    </li>
+                                )
+                            })
+                        }
                      </ul>
                 </div>
                 <AlertBuild
+                execAlert={execAlert}
                 alert={alert}
+                messageAlert={props.messageAlert || 'default'}
                 />    
             </nav>
         </header>

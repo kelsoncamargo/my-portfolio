@@ -1,3 +1,11 @@
+.alertActive{
+    display: flex;
+}
+
+.alertDisable{
+    display: none;
+}
+
 #mainBox{
     position: fixed;
     z-index: 999;
@@ -6,17 +14,40 @@
     height: 100%;
     top: 0;
     left: 0;
-    display: none;
     align-items: center;
     justify-content: center;
 }
 
-#alertBurgers{
-    position: absolute;
-    top: 0;
+
+#alertBox{
+    border: 2px solid #FF5B2F;
+    border-radius: 50px;
+    min-width: 260px;
+    width: 50vw;
+    max-width: 495px;
+    min-height: 300px;
+    height: 40vw;   
+    max-height: 395px; 
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
-#alertBurgers > div{
+#alertBurgers{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-top: 30px;
+    padding-right: 50px;
+    flex-grow: 1;
+    
+}
+
+#alertBurgers > div > div{
     width: 30px;
     height: 5px;
     background-color: #fff;
@@ -32,27 +63,19 @@
     margin-top: -5px;
 }
 
-#alertBox{
-    border: 2px solid #FF5B2F;
-    border-radius: 50px;
-    min-width: 260px;
-    width: 50vw;
-    max-width: 495px;
-    min-height: 274px;
-    height: 40vw;   
-    max-height: 395px; 
+#pAlertBox{
+    flex-grow: 5;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #000000;
-    
+
 }
 
 #alert{
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     color: #ffffff;
     padding: 0 20px;
-    font-weight: bold;
+    padding-bottom: 50px;
 }
+
 
