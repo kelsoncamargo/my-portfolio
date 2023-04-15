@@ -1,6 +1,6 @@
 //IMPORTS
-  import Header from '@/components/header/Header'
-import styles from '../styles/Home.module.css'
+  import Header from '@/components/header/header'
+  import styles from '../styles/Home.module.css'
 //IMPORTS
 
 export default function Home() {  
