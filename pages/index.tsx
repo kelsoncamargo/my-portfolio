@@ -1,5 +1,5 @@
 //IMPORTS
-  import Header from '../components/header/Header';
+  import Header from '@/components/header/Header';
   import styles from '../styles/Home.module.css'
 //IMPORTS
 
