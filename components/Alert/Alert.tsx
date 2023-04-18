@@ -1,15 +1,15 @@
 //IMPORTS
-import styles from './AlertBuild.module.css'
-import { AlertBuildTypes } from './types'
+import styles from './Alert.module.css'
+import { Alertypes } from './types'
 //IMPORTS
 
-export default function AlertBuild(props: AlertBuildTypes){
+export default function AlertBuild(props: Alertypes){
     return(
         <div id={styles.mainBox} className={props.alert? styles.alertActive : styles.alertDisable}>
             <div id={styles.alertBox}>
                 <div id={styles.alertBurgers} 
                 onClick={()=>{
-                    props.execAlert(false)
+                    props.disableAlert(false)
                 }}
                 >
                     <div>

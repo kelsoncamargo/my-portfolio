@@ -1,25 +1,10 @@
 //IMPORTS
-  import Header from '@/components/header/header'
+  import Header from '@/components/Header/Header'
   import styles from '../styles/Home.module.css'
+  import {Links} from './types'
 //IMPORTS
 
 export default function Home() {  
-  //TYPES
-    type Link = {
-      nameLink: string
-      execAlert: boolean
-      linkId: string
-    }
-
-    type Links = [
-        Link?,
-        Link?,
-        Link?,
-        Link?,
-        Link?
-    ]
-  //TYPES
-
   //VARIABLES
     const links:Links= [{
         nameLink: 'Home',

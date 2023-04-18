@@ -1,5 +1,5 @@
 //IMPORTS
-    import AlertBuild from './AlertBuild'
+    import Alert from '../Alert/Alert'
     import styles from './Header.module.css'
     import { useState } from 'react'
     import { HeaderTypes } from './types'
@@ -31,12 +31,7 @@ export default function header(props:HeaderTypes){
             setAlert(param)
         }
     //FUNCTIONS
-    console.log(props.links[0]?.execAlert)
-    console.log(props.links.map((link)=> {
-        console.log(link?.nameLink, link?.execAlert)
-    }))
                         
-    
     return(
         <header id={styles.header}>
             <div id={styles.boxTitle}>
@@ -53,7 +48,6 @@ export default function header(props:HeaderTypes){
                     <ul id={styles.linksUl}>
                         {
                             props.links.map(link => {
-                                const linkid = link?.linkId
                                 return (
                                     <li key={uuidv4()}>
                                         <p 
@@ -71,8 +65,8 @@ export default function header(props:HeaderTypes){
                         }
                      </ul>
                 </div>
-                <AlertBuild
-                execAlert={execAlert}
+                <Alert
+                disableAlert={execAlert}
                 alert={alert}
                 messageAlert={props.messageAlert || 'default'}
                 />    
