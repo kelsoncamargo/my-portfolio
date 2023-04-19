@@ -1,12 +1,12 @@
 //IMPORTS
-    import Alert from '../alert/alert'
+    import Alert from '@/components/alert/alert'
     import styles from './header.module.css'
     import { useState } from 'react'
-    import { HeaderTypes } from './typesHeader'
+    import { headerTypes } from './typesHeader'
     import { v4 as uuidv4 } from 'uuid';
 //IMPORTS
 
-export default function Header(props:HeaderTypes){
+export default function Header(props:headerTypes){
     //VARIABLES 
         const [toggleBurger, setToggleBurger] = useState('')
         const [alert, setAlert] = useState(false)

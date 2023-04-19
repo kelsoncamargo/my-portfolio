@@ -1,7 +1,7 @@
 
 // EXPORTS
     // INTERFACES
-        export interface HeaderTypes{
+        export interface headerTypes{
             h1Head: string
             links: Links
             messageAlert?: string
