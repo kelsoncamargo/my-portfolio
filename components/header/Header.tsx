@@ -1,4 +1,5 @@
 //IMPORTS
+    // @ts-ignore  
     import Alert from '@/components/alert/alert'
     import styles from './header.module.css'
     import { useState } from 'react'
