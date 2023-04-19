@@ -3,6 +3,7 @@
     import styles from './header.module.css'
     import { useState } from 'react'
     import { headerTypes } from './typesHeader'
+    // @ts-ignore
     import { v4 as uuidv4 } from 'uuid';
 //IMPORTS
 
