@@ -1,5 +1,4 @@
 //IMPORTS
-  // @ts-ignore  
   import Header from '@/components/header/header'
   import styles from '../styles/Home.module.css'
   import {Links} from '../types/typesHome'
