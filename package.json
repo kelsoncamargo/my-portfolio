@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "18.15.10",
     "@types/react": "18.0.30",
     "@types/react-dom": "18.0.11",
     "next": "13.2.4",
@@ -19,5 +18,8 @@
     "uuid": "^9.0.0",
     "uuidv4": "^6.2.13",
     "v4": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11"
   }
 }

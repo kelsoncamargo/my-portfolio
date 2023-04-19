@@ -1,6 +1,6 @@
 //IMPORTS
-import styles from './alert.module.css'
-import { Alertypes } from './typesAlert'
+    import styles from './alert.module.css'
+    import { Alertypes } from './typesAlert'
 //IMPORTS
 
 export default function Alert(props: Alertypes){
