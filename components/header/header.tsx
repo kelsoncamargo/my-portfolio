@@ -1,6 +1,6 @@
 //IMPORTS
-    import Alert from '../Alert/Alert'
-    import styles from './Header.module.css'
+    import Alert from '../alert/alert'
+    import styles from './header.module.css'
     import { useState } from 'react'
     import { HeaderTypes } from './types'
     import { v4 as uuidv4 } from 'uuid';
