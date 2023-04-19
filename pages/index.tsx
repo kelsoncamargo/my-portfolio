@@ -1,7 +1,7 @@
 //IMPORTS
   import Header from '@/components/Header/header'
   import styles from '../styles/Home.module.css'
-  import {Links} from './types'
+  import {Links} from '../types/types'
 //IMPORTS
 
 export default function Home() {  
