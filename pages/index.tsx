@@ -1,5 +1,5 @@
 //IMPORTS
-  import Header from '@/components/Header/header'
+  import Header from '@/components/header/Header'
   import styles from '../styles/Home.module.css'
   import {Links} from '../types/types'
 //IMPORTS
