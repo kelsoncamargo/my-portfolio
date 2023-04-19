@@ -1,6 +1,6 @@
 //EXPORTS
     // INTERFACES
-        export interface Alertypes{
+        export default interface Alertypes{
             alert: boolean
             disableAlert(params:boolean):void
             messageAlert: string
