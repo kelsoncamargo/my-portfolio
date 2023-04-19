@@ -1,5 +1,5 @@
 //IMPORTS
-    import styles from './alert.module.css'
+    import styles from './Alert.module.css'
     import Alertypes from './typesAlert'
 //IMPORTS
 
