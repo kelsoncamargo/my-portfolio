@@ -3,7 +3,7 @@ import styles from './Alert.module.css'
 import { Alertypes } from './types'
 //IMPORTS
 
-export default function AlertBuild(props: Alertypes){
+export default function Alert(props: Alertypes){
     return(
         <div id={styles.mainBox} className={props.alert? styles.alertActive : styles.alertDisable}>
             <div id={styles.alertBox}>

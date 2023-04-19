@@ -6,7 +6,7 @@
     import { v4 as uuidv4 } from 'uuid';
 //IMPORTS
 
-export default function header(props:HeaderTypes){
+export default function Header(props:HeaderTypes){
     //VARIABLES 
         const [toggleBurger, setToggleBurger] = useState('')
         const [alert, setAlert] = useState(false)
