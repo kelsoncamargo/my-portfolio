@@ -1,5 +1,5 @@
 //IMPORTS
-    import Alert from '../alert/alert'
+    import Alert from '../Alert/alert'
     import styles from './header.module.css'
     import { useState } from 'react'
     import { HeaderTypes } from './types'
