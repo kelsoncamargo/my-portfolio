@@ -121,3 +121,56 @@ const App = () => {
 export default App;
 
 ~~~
+
+<br>
+
+# Alert Component
+The alert component is a popup message that will be displayed to the user when a specific link or component is cliked and the "execAlert" property of the used component is set to true. It coudl be used to inform the user that specific part of the site is still under development or any other message.
+
+### <b>Props</b>
+- <b>alert(boolean)</b>: A boolean that indicates wheter the alert component should be displayed or not.
+- <b>disableAlert(function)</b> A function tha will disable the alert component when called. Receives a boolean parameter that indicates whether the alert should be disabled or note.
+- <b>messageAlert(String)</b> The message to be displayed to the user in the alert component. 
+
+### <b>Type: AlertProps</b>
+~~~ts
+interface AlertProps {
+  alert: boolean
+  disableAlert(params: boolean): void
+  messageAlert: string
+}
+~~~
+
+### <b>Example of use</b>
+~~~ts
+//IMPORTS
+    import Alert from '../Alert/Alert'
+    import { useState } from 'react'
+//IMPORTS
+
+export default function MyComponent(){
+    //VARIABLES 
+        const [alert, setAlert] = useState(false)
+        const messageAlert = "This is a Message"
+    //VARIABLES
+
+    //FUNCTIONS
+        function execAlert(param: boolean){
+            setAlert(param)
+        }
+    //FUNCTIONS
+                        
+    return(
+        <div>
+            <button onClick={()=> execAlert(true)}>Click</button>
+            <Alert
+            disableAlert={execAlert}
+            alert={alert}
+            messageAlert={messageAlert}
+            />    
+        </div>
+    )
+}
+
+
+~~~
