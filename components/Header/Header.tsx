@@ -54,7 +54,7 @@ export default function Header(props:HeaderTypes){
                                             id={styles.linkid} 
                                             className={styles.linksLi}
                                             onClick={()=>{
-                                                link?.execAlert? execAlert(true) : null
+                                                link?.execAlert? setAlert(true) : null
                                             }}
                                         >
                                             {link?.nameLink}
@@ -66,8 +66,8 @@ export default function Header(props:HeaderTypes){
                      </ul>
                 </div>
                 <Alert
-                disableAlert={execAlert}
                 alert={alert}
+                disableAlert={execAlert}
                 messageAlert={props.messageAlert || 'default'}
                 />    
             </nav>

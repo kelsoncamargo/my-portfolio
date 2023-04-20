@@ -125,12 +125,12 @@ export default App;
 <br>
 
 # Alert Component
-The alert component is a popup message that will be displayed to the user when a specific link or component is cliked and the "execAlert" property of the used component is set to true. It coudl be used to inform the user that specific part of the site is still under development or any other message.
+The Alert component is used to display an alert message to the user. It gets the following properties:
 
 ### <b>Props</b>
-- <b>alert(boolean)</b>: A boolean that indicates wheter the alert component should be displayed or not.
-- <b>disableAlert(function)</b> A function tha will disable the alert component when called. Receives a boolean parameter that indicates whether the alert should be disabled or note.
-- <b>messageAlert(String)</b> The message to be displayed to the user in the alert component. 
+- <b>alert(boolean)</b>: Indicates whether the alert message should be displayed or not.
+- <b>disableAlert(function)</b>  A callback function that should be passed to the Alert component as a prop. This function will be called when the user clicks on the "close" button of the alert message, and it should update the state of the parent component that controls the alert's visibility.
+- <b>messageAlert(String)</b>  The message to be displayed in the alert box.
 
 ### <b>Type: AlertProps</b>
 ~~~ts
@@ -142,6 +142,14 @@ interface AlertProps {
 ~~~
 
 ### <b>Example of use</b>
+
+In the example below, we have a parent component that controls the visibility of the alert message through the <b>showAlert state variable</b>. When the user clicks on the <b>"Show Alert" button</b>, the state is updated to <b>true</b>, which makes the alert component visible.
+
+The <b>execAlert function is passed to the Alert component as a prop</b> and is responsible for updating the state when the user <b>clicks on the "close" button of the alert message</b>. The disableAlert prop expects a function that receives a boolean parameter indicating whether the alert should be hidden or not.
+
+When the user <b>clicks on the "close" button of the alert message</b>, the <b>execAlert function is called with the value false</b>, which updates the state and hides the alert message.
+
+
 ~~~ts
 //IMPORTS
     import Alert from '../Alert/Alert'
@@ -150,13 +158,13 @@ interface AlertProps {
 
 export default function MyComponent(){
     //VARIABLES 
-        const [alert, setAlert] = useState(false)
+        const [showAlert, setShowAlert] = useState(false);
         const messageAlert = "This is a Message"
     //VARIABLES
 
     //FUNCTIONS
         function execAlert(param: boolean){
-            setAlert(param)
+            setShowAlert(param)
         }
     //FUNCTIONS
                         
@@ -164,8 +172,8 @@ export default function MyComponent(){
         <div>
             <button onClick={()=> execAlert(true)}>Click</button>
             <Alert
+            alert={showAlert}
             disableAlert={execAlert}
-            alert={alert}
             messageAlert={messageAlert}
             />    
         </div>
@@ -174,3 +182,4 @@ export default function MyComponent(){
 
 
 ~~~
+
